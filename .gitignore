@@ -1,0 +1,5 @@
+build/
+/Makefile
+
+# os nonsense
+.DS_Store
