@@ -10,6 +10,27 @@ case "${unameOut}" in
 	*)			env=Unknown;;
 esac
 
+echo "Creating directories..."
+mkdir .include
+mkdir .include/win
+mkdir .include/osx
+mkdir .include/linux
+mkdir .include/win/Platinum
+mkdir .include/win/GLFW
+mkdir .include/osx/Platinum
+mkdir .include/osx/GLFW
+#mkdir .include/linux/Platinum
+#mkdir .include/linux/GLFW
+
+echo "Copying GLFW files..."
+cp lib/win/include/GLFW/glfw3.h .include/win/GLFW/glfw3.h
+cp lib/win/include/GLFW/glfw3.h .include/win/GLFW/glfw3native.h
+cp lib/osx/include/GLFW/glfw3.h .include/osx/GLFW/glfw3.h
+cp lib/osx/include/GLFW/glfw3.h .include/osx/GLFW/glfw3native.h
+#cp lib/linux/include/GLFW/glfw3.h .include/linux/GLFW/glfw3.h
+#cp lib/linux/include/GLFW/glfw3.h .include/linux/GLFW/glfw3native.h
+
+echo "Installing compilers..."
 if [ $env == "Mac" ]; then
 	echo "Mac OS X detected"
 	ver="$(sw_vers -productVersion)"
