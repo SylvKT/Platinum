@@ -1,9 +1,5 @@
 build/
-.include/osx/*
-.include/win/*
-.include/linux/*
-.include/libplatinum.a
-.include/Platinum/*
+.include/
 CMake/
 CMakeFiles/
 CMakeCache.txt
