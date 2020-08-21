@@ -1,9 +1,6 @@
 # Platinum
 An open-source, lightweight, and easy-to-use 2D/3D game engine written in C++.
 
-# a
-- Yeah.
-
 # FAQ
 - Q: Is this game engine for me?
 	- A: That's for you to decide, not me.
