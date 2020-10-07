@@ -14,13 +14,19 @@ echo "Creating directories..."
 mkdir .include
 mkdir .include/win
 mkdir .include/osx
-mkdir .include/linux
+#mkdir .include/linux
 mkdir .include/win/Platinum
 mkdir .include/win/GLFW
+mkdir .include/win/glad
+mkdir .include/win/KHR
 mkdir .include/osx/Platinum
 mkdir .include/osx/GLFW
+mkdir .include/osx/glad
+mkdir .include/osx/KHR
 #mkdir .include/linux/Platinum
 #mkdir .include/linux/GLFW
+#mkdir .include/linux/glad
+#mkdir .include/linux/KHR
 
 echo "Copying GLFW files..."
 cp lib/win/include/GLFW/glfw3.h .include/win/GLFW/glfw3.h
@@ -29,6 +35,18 @@ cp lib/osx/include/GLFW/glfw3.h .include/osx/GLFW/glfw3.h
 cp lib/osx/include/GLFW/glfw3.h .include/osx/GLFW/glfw3native.h
 #cp lib/linux/include/GLFW/glfw3.h .include/linux/GLFW/glfw3.h
 #cp lib/linux/include/GLFW/glfw3.h .include/linux/GLFW/glfw3native.h
+
+echo "Copying GLAD files..."
+#cp lib/win/include/glad/glad.h .include/win/glad/glad.h
+#cp lib/win/include/KHR/khrplatform.h .include/win/KHR/khrplatform.h
+#cp lib/win/libglad.a .include/win/libglad.a
+cp lib/osx/include/glad/glad.h .include/osx/glad/glad.h
+#cp lib/osx/include/KHR/khrplatform.h .include/osx/KHR/khrplatform.h
+cp lib/osx/libglad.a .include/osx/libglad.a
+#cp lib/linux/include/glad/glad.h .include/linux/glad/glad.h
+#cp lib/linux/include/KHR/khrplatform.h .include/linux/KHR/khrplatform.h
+#cp lib/linux/libglad.a .include/linux/libglad.a
+# TODO: compile linux/windows glad binary
 
 echo "Installing compilers..."
 if [ $env == "Mac" ]; then
